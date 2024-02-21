@@ -8,10 +8,9 @@ import java.util.logging.SimpleFormatter;
 
 public class FineLevelLog {
     private static final Logger logger = Logger.getLogger(FineLevelLog.class.getName());
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a name: ");
+        System.out.print("Enter name: ");
         String name = scanner.nextLine();
         showName(name);
     }
@@ -22,6 +21,6 @@ public class FineLevelLog {
         consoleHandler.setFormatter(new SimpleFormatter());
         logger.addHandler(consoleHandler);
         logger.setLevel(Level.FINE);
-        logger.log(Level.FINE, "The name is: " + name);
+        logger.log(Level.FINE, "Name: " + name);
     }
 }
